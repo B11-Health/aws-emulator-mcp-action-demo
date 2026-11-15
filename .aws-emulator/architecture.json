@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "checkout-review-demo",
-  "description": "Synthetic checkout resources used to test a pinned external GitHub Action.",
+  "description": "Synthetic checkout with an added fulfillment queue, no existing resources changed.",
   "actor": {
     "id": "CheckoutApp",
     "label": "Checkout API"
@@ -17,6 +17,11 @@
       "type": "dynamodb-table",
       "label": "Order records",
       "partitionKey": "orderId"
+    },
+    {
+      "id": "FulfillmentQueue",
+      "type": "sqs-queue",
+      "label": "Fulfillment events"
     }
   ],
   "flows": [
@@ -29,6 +34,11 @@
       "from": "CheckoutApp",
       "to": "OrdersTable",
       "label": "Save order"
+    },
+    {
+      "from": "CheckoutApp",
+      "to": "FulfillmentQueue",
+      "label": "Publish event"
     }
   ]
 }
