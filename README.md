@@ -24,6 +24,21 @@ The Action compares source manifests and generates SVG/draw.io diagrams,
 CloudFormation drafts, a structured report and a job summary. It is **not a
 live AWS CloudFormation change set**. No AWS account or credentials are used.
 
+## Verified consumer runs
+
+The published upstream Action has now passed a separate-repository
+[add-only PR #1](https://github.com/B11-Health/aws-emulator-mcp-action-demo/pull/1),
+**blocked an intentionally risky**
+[DynamoDB-key PR #2](https://github.com/B11-Health/aws-emulator-mcp-action-demo/pull/2),
+and passed a
+[diagram-only root-Action PR #3](https://github.com/B11-Health/aws-emulator-mcp-action-demo/pull/3).
+
+[**View the three permanent, checksum-verified evidence snapshots.**](evidence/README.md)
+
+These demonstrations are all maintained by the same project. They are
+real separate-repository GitHub Action runs, **not third-party endorsements**.
+The red check on PR #2 is intentional.
+
 ## How to use
 
 Copy [the workflow](.github/workflows/architecture-review.yml) and

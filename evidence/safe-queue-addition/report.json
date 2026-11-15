@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "reviewKind": "local-blueprint-comparison",
+  "name": "checkout-review-demo",
+  "beforePresent": true,
+  "awsAccountAccess": false,
+  "cloudFormationChangeSet": false,
+  "awsDeployment": false,
+  "emulatorTestExecuted": false,
+  "beforeSha256": "2c4f2883c6632e95a4c9eb683b105cc0cc8703cbccfac0219ae108d82a40ad1d",
+  "afterSha256": "7e04b9c0af0e2c0f686958313882a1df99f2e643f3a6209aac0c5100ffa72a07",
+  "counts": {
+    "unchanged": 2,
+    "added": 1,
+    "modified": 0,
+    "removed": 0,
+    "conceptual": 0
+  },
+  "highRiskCount": 0,
+  "conceptualFlowsChanged": true,
+  "changes": [
+    {
+      "id": "FulfillmentQueue",
+      "status": "added",
+      "risk": "low",
+      "typeBefore": null,
+      "typeAfter": "sqs-queue",
+      "reason": "New resource in proposed blueprint"
+    },
+    {
+      "id": "OrdersTable",
+      "status": "unchanged",
+      "risk": "none",
+      "typeBefore": "dynamodb-table",
+      "typeAfter": "dynamodb-table",
+      "reason": "Resource definition and conceptual flow unchanged"
+    },
+    {
+      "id": "ReceiptBucket",
+      "status": "unchanged",
+      "risk": "none",
+      "typeBefore": "s3-bucket",
+      "typeAfter": "s3-bucket",
+      "reason": "Resource definition and conceptual flow unchanged"
+    }
+  ],
+  "warnings": [
+    "This is a source-manifest comparison, NOT an AWS CloudFormation change set or actual deployment plan.",
+    "High-risk flags are conservative prompts for human review, not proof that AWS will replace or delete a resource.",
+    "The actor and arrows show conceptual flow. No application, IAM role, permissions, event binding or integration is deployed.",
+    "Use a real AWS CloudFormation change set, security review and cost review before approving any deployment."
+  ],
+  "artifacts": {
+    "before-architecture.json": {
+      "sha256": "2c4f2883c6632e95a4c9eb683b105cc0cc8703cbccfac0219ae108d82a40ad1d",
+      "bytes": 699
+    },
+    "after-architecture.json": {
+      "sha256": "7e04b9c0af0e2c0f686958313882a1df99f2e643f3a6209aac0c5100ffa72a07",
+      "bytes": 920
+    },
+    "before-diagram.svg": {
+      "sha256": "86d4e4c47cd1fc0cd969499ce417f1a3840262e4cb533f162caeeca990db6e0b",
+      "bytes": 3085
+    },
+    "after-diagram.svg": {
+      "sha256": "2d2ffbf4aade27b725a1071d6cd6a95d869e02585f21e3084b2c44f88710a131",
+      "bytes": 3880
+    },
+    "before-diagram.drawio": {
+      "sha256": "065b69da5481aa361019600fac721944e4c5832bd2e4e7358d37ec6ee62e9c84",
+      "bytes": 1919
+    },
+    "after-diagram.drawio": {
+      "sha256": "bb6dbc54568309a1687ecb20a772ea5af164d9ca271e431e2f14df6185083d79",
+      "bytes": 2559
+    },
+    "before-template.yaml": {
+      "sha256": "01ece4c5a036fcf87ca862dc97c770aacf4a515e397f20713776e227d264d0e3",
+      "bytes": 1393
+    },
+    "after-template.yaml": {
+      "sha256": "5c560204536724b10f94036762662b90d6722f06162aa1341c7ccc67979dd47d",
+      "bytes": 1643
+    },
+    "architecture-diff.svg": {
+      "sha256": "992639d2d6e00dbb380b5dfb47415c6b5f806cfcbace09fbb6d4e540e43f1a15",
+      "bytes": 5964
+    },
+    "summary.md": {
+      "sha256": "e0a79711e800594807245aadef746603e0b80d7a1258f52cc70492c3f0cdc09a",
+      "bytes": 902
+    }
+  }
+}
