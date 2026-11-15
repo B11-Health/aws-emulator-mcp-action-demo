@@ -1,0 +1,22 @@
+name: External AWS architecture-review Action test
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  proposed-architecture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Compare committed blueprint with the real PR base SHA
+        uses: B11-Health/aws-emulator-mcp/.github/actions/architecture-review@f8ec8d663fc400b41b839f71ffb04b1ad4bc7f07 # v0.4.0-beta.12
+        with:
+          manifest: .aws-emulator/architecture.json
+          fail-on-risk: high

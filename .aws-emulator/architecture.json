@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "name": "checkout-review-demo",
+  "description": "Synthetic checkout resources used to test a pinned external GitHub Action.",
+  "actor": {
+    "id": "CheckoutApp",
+    "label": "Checkout API"
+  },
+  "resources": [
+    {
+      "id": "ReceiptBucket",
+      "type": "s3-bucket",
+      "label": "Receipt storage"
+    },
+    {
+      "id": "OrdersTable",
+      "type": "dynamodb-table",
+      "label": "Order records",
+      "partitionKey": "orderId"
+    }
+  ],
+  "flows": [
+    {
+      "from": "CheckoutApp",
+      "to": "ReceiptBucket",
+      "label": "Save receipt"
+    },
+    {
+      "from": "CheckoutApp",
+      "to": "OrdersTable",
+      "label": "Save order"
+    }
+  ]
+}
