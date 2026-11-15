@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "checkout-review-demo",
-  "description": "Synthetic checkout with an added fulfillment queue, no existing resources changed.",
+  "description": "Synthetic checkout with a diagram-only event-flow label update.",
   "actor": {
     "id": "CheckoutApp",
     "label": "Checkout API"
@@ -38,7 +38,7 @@
     {
       "from": "CheckoutApp",
       "to": "FulfillmentQueue",
-      "label": "Publish event"
+      "label": "Publish fulfillment event"
     }
   ]
 }
