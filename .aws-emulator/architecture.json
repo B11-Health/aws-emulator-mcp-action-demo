@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "checkout-review-demo",
-  "description": "Synthetic checkout with a diagram-only event-flow label update.",
+  "description": "Project-maintained negative test: DynamoDB partition key change should block PR.",
   "actor": {
     "id": "CheckoutApp",
     "label": "Checkout API"
@@ -16,7 +16,7 @@
       "id": "OrdersTable",
       "type": "dynamodb-table",
       "label": "Order records",
-      "partitionKey": "orderId"
+      "partitionKey": "orderRef"
     },
     {
       "id": "FulfillmentQueue",
