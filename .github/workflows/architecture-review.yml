@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Compare committed blueprint with the real PR base SHA
-        uses: B11-Health/aws-emulator-mcp/.github/actions/architecture-review@f8ec8d663fc400b41b839f71ffb04b1ad4bc7f07 # v0.4.0-beta.12
+        uses: B11-Health/aws-emulator-mcp@b14fb52e6c69b661e7d0a8dd2d2dd2aa38c851be # v0.4.0-beta.13
         with:
           manifest: .aws-emulator/architecture.json
           fail-on-risk: high
